@@ -1,0 +1,78 @@
+import type { SkillGroup } from "@/types";
+
+export const skillGroups: SkillGroup[] = [
+  {
+    id: "backend",
+    title: "Backend & Architecture",
+    icon: "stack",
+    keywords: [
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "NestJS",
+      "Express",
+      "Microservices",
+      "Monoliths",
+      "GraphQL",
+      "Zod",
+    ],
+  },
+  {
+    id: "data",
+    title: "Big Data & Observability",
+    icon: "pulse",
+    keywords: [
+      "ElasticSearch",
+      "Kafka",
+      "RabbitMQ",
+      "Redis",
+      "MQTT",
+      "Grafana",
+      "Python",
+      "NumPy",
+      "Pandas",
+    ],
+  },
+  {
+    id: "databases",
+    title: "Databases",
+    icon: "database",
+    keywords: [
+      "PostgreSQL",
+      "MariaDB",
+      "ClickHouse",
+      "Google BigQuery",
+      "InfluxDB",
+      "Neo4j (Graph)",
+      "MikroORM",
+      "TypeORM",
+      "Prisma",
+    ],
+  },
+  {
+    id: "devops",
+    title: "DevOps & Cloud",
+    icon: "cloud",
+    keywords: [
+      "Kubernetes",
+      "Rancher",
+      "OpenShift",
+      "Docker",
+      "Google Cloud Platform",
+      "CI/CD",
+    ],
+  },
+  {
+    id: "other",
+    title: "Tooling & Other",
+    icon: "spark",
+    keywords: [
+      "Agile / Scrum",
+      "Jira",
+      "Solidity",
+      "Smart Contracts",
+      "Web3",
+      "React Native",
+    ],
+  },
+];
