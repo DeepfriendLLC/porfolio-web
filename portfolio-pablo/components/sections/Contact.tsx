@@ -3,6 +3,7 @@ import { Section } from "@/components/ui/Section";
 import { SocialLinks } from "@/components/ui/SocialLinks";
 import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
+import { TerminalSsh } from "@/components/ui/TerminalSsh";
 
 export function Contact() {
   const email = profile.social.find((item) => item.icon === "email");
@@ -72,7 +73,7 @@ export function Contact() {
                 />
                 <span
                   aria-hidden
-                  className="absolute inset-0 -translate-x-full bg-gradient-to-r from-teal to-teal-deep transition-transform duration-500 group-hover/cta:translate-x-0"
+                  className="absolute inset-0 z-[5] -translate-x-full bg-gradient-to-r from-teal to-teal-deep transition-transform duration-500 group-hover/cta:translate-x-0"
                 />
               </a>
             </div>
@@ -88,6 +89,23 @@ export function Contact() {
               <div className="mt-4">
                 <SocialLinks items={profile.social} />
               </div>
+            </div>
+
+            <div className="md:col-span-5">
+              <div className="relative my-2 flex items-center gap-4">
+                <span
+                  aria-hidden
+                  className="h-px flex-1 bg-gradient-to-r from-transparent via-border-strong/70 to-transparent"
+                />
+                <span className="font-mono text-[10.5px] uppercase tracking-[0.28em] text-text-muted">
+                  Or explore from your terminal
+                </span>
+                <span
+                  aria-hidden
+                  className="h-px flex-1 bg-gradient-to-r from-transparent via-border-strong/70 to-transparent"
+                />
+              </div>
+              <TerminalSsh className="mt-4" />
             </div>
           </div>
         </div>
