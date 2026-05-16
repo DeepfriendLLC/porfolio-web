@@ -2,6 +2,7 @@ import { profile, projectRepoUrl } from "@/constants/profile";
 import { Icon } from "@/components/ui/Icon";
 import { SocialLinks } from "@/components/ui/SocialLinks";
 import { Reveal } from "@/components/ui/Reveal";
+import { TerminalSsh } from "@/components/ui/TerminalSsh";
 
 export function Hero() {
   return (
@@ -148,7 +149,26 @@ export function Hero() {
           </div>
         </Reveal>
 
-        <dl className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-4">
+        <Reveal delay={420} direction="scale">
+          <div className="mt-12 w-full md:mx-auto md:mt-14 md:max-w-xl">
+            <div className="flex items-center gap-4">
+              <span
+                aria-hidden
+                className="h-px flex-1 bg-gradient-to-r from-transparent via-border-strong/70 to-transparent"
+              />
+              <span className="font-mono text-[10.5px] uppercase tracking-[0.28em] text-text-muted">
+                Or explore from your terminal
+              </span>
+              <span
+                aria-hidden
+                className="h-px flex-1 bg-gradient-to-r from-transparent via-border-strong/70 to-transparent"
+              />
+            </div>
+            <TerminalSsh className="mt-4" />
+          </div>
+        </Reveal>
+
+        <dl className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:mt-16 md:grid-cols-4">
           {profile.highlights.map((highlight, idx) => (
             <Reveal
               key={highlight.label}
