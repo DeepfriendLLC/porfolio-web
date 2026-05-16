@@ -1,5 +1,6 @@
 import { profile } from "@/constants/profile";
 import { Section } from "@/components/ui/Section";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function About() {
   return (
@@ -9,19 +10,34 @@ export function About() {
       title="Senior Backend Engineer focused on scale, latency and clarity."
     >
       <div className="grid gap-10 md:grid-cols-5">
-        <div className="md:col-span-3">
+        <Reveal direction="left" className="md:col-span-3">
           <div className="space-y-5 text-base leading-relaxed text-text md:text-lg">
-            {profile.summary.map((paragraph) => (
-              <p key={paragraph}>
+            {profile.summary.map((paragraph, idx) => (
+              <p
+                key={paragraph}
+                className={
+                  idx === 0
+                    ? "relative pl-5 before:absolute before:left-0 before:top-1 before:h-[calc(100%-0.5rem)] before:w-[3px] before:rounded-full before:bg-gradient-to-b before:from-teal before:to-navy"
+                    : ""
+                }
+              >
                 {paragraph}
               </p>
             ))}
           </div>
-        </div>
+        </Reveal>
 
-        <aside className="md:col-span-2">
-          <div className="rounded-2xl border border-border bg-surface p-6">
-            <h3 className="font-mono text-xs uppercase tracking-[0.22em] text-text-muted">
+        <Reveal direction="right" delay={150} className="md:col-span-2">
+          <aside className="group relative overflow-hidden rounded-2xl border border-border bg-surface p-6 transition-all hover:border-teal/40 hover:shadow-soft">
+            <span
+              aria-hidden
+              className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-teal/15 blur-2xl transition-opacity duration-500 group-hover:opacity-150"
+            />
+            <h3 className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.22em] text-text-muted">
+              <span
+                aria-hidden
+                className="inline-flex size-1.5 rounded-full bg-teal"
+              />
               At a glance
             </h3>
             <ul className="mt-4 space-y-3 text-sm text-text">
@@ -31,8 +47,8 @@ export function About() {
               <Fact label="Citizenship" value="Spanish · EU" />
               <Fact label="Availability" value="Permanent · Freelance" />
             </ul>
-          </div>
-        </aside>
+          </aside>
+        </Reveal>
       </div>
     </Section>
   );
@@ -40,19 +56,15 @@ export function About() {
 
 function Fact({
   label,
-  value
+  value,
 }: {
   label: string;
-  value: string
+  value: string;
 }) {
   return (
     <li className="flex items-start justify-between gap-4 border-b border-border/70 pb-3 last:border-b-0 last:pb-0">
-      <span className="text-text-muted">
-        {label}
-      </span>
-      <span className="text-right font-medium text-text-strong">
-        {value}
-      </span>
+      <span className="text-text-muted">{label}</span>
+      <span className="text-right font-medium text-text-strong">{value}</span>
     </li>
   );
 }
