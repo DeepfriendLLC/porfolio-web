@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Reveal } from "./Reveal";
 
 type SectionProps = {
   id: string;
@@ -22,22 +23,28 @@ export function Section({
       aria-labelledby={`${id}-title`}
     >
       <div className="mx-auto max-w-5xl px-6 md:px-10">
-        <header className="mb-12 max-w-2xl">
-          <p className="font-mono text-xs uppercase tracking-[0.22em] text-accent">
-            {eyebrow}
-          </p>
-          <h2
-            id={`${id}-title`}
-            className="mt-3 text-3xl font-semibold tracking-tight text-text-strong md:text-4xl"
-          >
-            {title}
-          </h2>
-          {description ? (
-            <p className="mt-4 text-base leading-relaxed text-text-muted">
-              {description}
+        <Reveal>
+          <header className="mb-12 max-w-2xl">
+            <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] text-teal">
+              <span
+                aria-hidden
+                className="inline-flex h-px w-8 bg-gradient-to-r from-teal to-transparent"
+              />
+              {eyebrow}
             </p>
-          ) : null}
-        </header>
+            <h2
+              id={`${id}-title`}
+              className="mt-3 text-3xl font-semibold tracking-tight text-text-strong md:text-4xl"
+            >
+              {title}
+            </h2>
+            {description ? (
+              <p className="mt-4 text-base leading-relaxed text-text-muted">
+                {description}
+              </p>
+            ) : null}
+          </header>
+        </Reveal>
         {children}
       </div>
     </section>
