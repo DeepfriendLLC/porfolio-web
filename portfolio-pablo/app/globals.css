@@ -177,6 +177,28 @@ body {
   animation: shimmer 3.2s ease-in-out infinite;
 }
 
+@keyframes caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-caret-blink {
+  animation: caret-blink 1.05s steps(2, jump-none) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-caret-blink {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 /* Bar fill animation triggered when parent reveal becomes visible */
 .bar-fill {
   transform: scaleX(0);
