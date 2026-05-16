@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pablo Vallejo — Senior Backend Engineer",
+  title: "Pablo Vallejo | Portfolio",
   description:
     "Senior Backend Engineer with 8+ years of experience in Node.js, TypeScript and real-time Big Data. Building high-throughput systems for 10M+ users.",
   metadataBase: new URL("https://portfolio.dfbubbles.com"),
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Pablo Vallejo — Senior Backend Engineer",
+    title: "Pablo Vallejo | Portfolio",
     description:
       "Senior Backend Engineer with 8+ years of experience in Node.js, TypeScript and real-time Big Data.",
     url: "https://portfolio.dfbubbles.com",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pablo Vallejo — Senior Backend Engineer",
+    title: "Pablo Vallejo | Portfolio",
     description:
       "Senior Backend Engineer with 8+ years of experience in Node.js, TypeScript and real-time Big Data.",
   },
