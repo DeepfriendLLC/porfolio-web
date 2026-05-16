@@ -21,7 +21,16 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
   } = experience;
 
   return (
-    <article className="group relative rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-border-strong md:p-8">
+    <article className="group relative overflow-hidden rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-teal/50 hover:shadow-soft md:p-8">
+      <span
+        aria-hidden
+        className="absolute inset-y-0 left-0 w-[3px] origin-top scale-y-0 bg-gradient-to-b from-teal to-navy transition-transform duration-500 group-hover:scale-y-100"
+      />
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-teal/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
+      />
+
       <div className="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
         <div>
           <h3 className="text-lg font-semibold text-text-strong md:text-xl">
@@ -33,21 +42,24 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
                 href={companyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 font-medium text-accent transition-colors hover:text-accent-strong"
+                className="inline-flex items-center gap-1.5 font-medium text-navy transition-colors hover:text-teal"
               >
                 {company}
                 <Icon name="external" size={13} />
               </a>
             ) : (
-              <span className="font-medium">{company}</span>
+              <span className="font-medium text-navy">{company}</span>
             )}
             <span className="text-text-muted"> · {location}</span>
           </p>
         </div>
         <div className="flex items-center gap-2">
           {current ? (
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-accent">
-              <span className="size-1.5 rounded-full bg-accent" />
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-teal/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-teal-deep">
+              <span className="relative inline-flex size-1.5">
+                <span className="absolute inset-0 inline-flex rounded-full bg-teal animate-pulse-ring" />
+                <span className="relative inline-flex size-1.5 rounded-full bg-teal" />
+              </span>
               Active
             </span>
           ) : null}
@@ -69,7 +81,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
           >
             <span
               aria-hidden
-              className="mt-2 size-1.5 shrink-0 rounded-full bg-accent"
+              className="mt-2 size-1.5 shrink-0 rounded-full bg-teal"
             />
             <span>{bullet}</span>
           </li>
