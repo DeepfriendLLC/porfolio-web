@@ -33,13 +33,15 @@ export function SocialLinks({ items, variant = "stacked" }: SocialLinksProps) {
 function SocialEntry({ item }: { item: SocialLink }) {
   const content = (
     <span className="inline-flex items-center gap-2.5">
-      <Icon name={item.icon} size={16} />
+      <span className="inline-flex size-7 items-center justify-center rounded-md bg-surface-subtle text-text-muted transition-all group-hover:bg-teal/10 group-hover:text-teal">
+        <Icon name={item.icon} size={14} />
+      </span>
       <span>{item.value}</span>
     </span>
   );
 
   if (!item.href) {
-    return <span className="text-text-muted">{content}</span>;
+    return <span className="group inline-flex text-text-muted">{content}</span>;
   }
 
   const isExternal = item.href.startsWith("http");
@@ -49,7 +51,7 @@ function SocialEntry({ item }: { item: SocialLink }) {
       href={item.href}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
-      className="inline-flex items-center gap-1.5 text-text transition-colors hover:text-accent"
+      className="group inline-flex items-center gap-1.5 text-text transition-colors hover:text-teal"
     >
       {content}
     </a>
