@@ -1,6 +1,6 @@
 import type { Profile } from "@/types";
 
-export const projectRepoUrl = "https://github.com/DeepfriendLLC/porfolio-web";
+export const projectRepoUrl = "https://github.com/pablovallejodev/porfolio-web";
 
 export const profile: Profile = {
   name: "Pablo Vallejo",
@@ -46,8 +46,8 @@ export const profile: Profile = {
     },
     {
       label: "GitHub",
-      value: "DeepfriendLLC",
-      href: "https://github.com/DeepfriendLLC",
+      value: "pablovallejodev",
+      href: "https://github.com/pablovallejodev",
       icon: "github",
     },
     {
