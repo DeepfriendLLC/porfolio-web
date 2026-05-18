@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const DEFAULT_COMMAND = "ssh terminal.dfbubbles.com";
+const DEFAULT_COMMAND = "ssh terminal.pablovallejo.dev";
 
 type TerminalSshProps = {
   command?: string;
