@@ -34,8 +34,8 @@ export const profile: Profile = {
   social: [
     {
       label: "Email",
-      value: "pablo.vallejo@dfbubbles.com",
-      href: "mailto:pablo.vallejo@dfbubbles.com",
+      value: "pablo@pablovallejo.dev",
+      href: "mailto:pablo@pablovallejo.dev",
       icon: "email",
     },
     {
