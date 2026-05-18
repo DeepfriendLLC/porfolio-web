@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Pablo Vallejo | Portfolio",
   description:
     "Senior Backend Engineer with 8+ years of experience in Node.js, TypeScript and real-time Big Data. Building high-throughput systems for 10M+ users.",
-  metadataBase: new URL("https://portfolio.dfbubbles.com"),
+  metadataBase: new URL("https://pablovallejo.dev"),
   icons: {
     icon: "/favicon.ico",
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Pablo Vallejo | Portfolio",
     description:
       "Senior Backend Engineer with 8+ years of experience in Node.js, TypeScript and real-time Big Data.",
-    url: "https://portfolio.dfbubbles.com",
+    url: "https://pablovallejo.dev",
     type: "website",
   },
   twitter: {
